@@ -1,0 +1,23 @@
+<div id="quote-page">
+    <div id="quote-container">
+        <h1 id="quote-title">&bull; Quote &bull;</h1>
+        <div class="underline">
+        </div>
+        <div class="icon-wrapper">
+            <%= image_tag("icon.PNG", class: "quote-icon") %>
+        </div>
+        <%= form_with url: "/quote", method: :post do |form| %>
+            <%= form.text_field :name, required: true, placeholder: "Name" %>
+            <br>
+            <%= form.telephone_field :phone, required: true, placeholder: "515-098-1234" %>
+            <br>
+            <%= form.text_field :address_1, required: true, placeholder: "Current Address" %>
+            <br>
+            <%= form.text_field :address_2, required: true, placeholder: "Destination Address" %>
+            <br>
+            <%= form.date_field :move_date, required: true %>
+            <br>
+            <%= form.submit "Get your Quote!", id: "form_button" %>
+        <% end %>
+    </div>
+</div>

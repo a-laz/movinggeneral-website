@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% stylesheet_link_tag "application", :media => "all" %>
+    <% stylesheet_link_tag params[:controller] %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+
+<body class="<%= controller.controller_name%>">
+  <title>
+    <div class="header">
+        <h1>Moving General</h1>
+    <div>
+  </title>
+
+    <div class="container" id="main_container">
+        
+        <h1 id="title_text">Moving General</h1>
+        <h3 id="phone_number"><a href="tel:6143981565">614-398-1565</a></h3>
+        <%= image_tag("icon.PNG", class: "icon") %>
+        <h3 id="dot_number">USDOT# 3625861</h3>  
+        <br><br><br><br>
+        <<div class="button_slide slide_left"><a href="/quote">Free Quote</a></div>
+        <br><br><br><br>
+        <p class="title1">WE OFFER PACKING, LOADING, UNLOADING, JUNK REMOVAL, AND FULL
+        SERVICE MOVES. WE SET THE STANDARD WHEN IT COMES TO
+        MOVING. WE KNOW YOU'LL BE IN GOOD HANDS</p>
+        <br><br>
+    </div>
+    
+    <div class="container" id="services_container">
+        <br>
+        <h1>There Are Just a Few Things
+        That We Can Do Very Well.</h1>
+        <br><br><br>
+        <div class="flex-grid">
+            <div class="col" id="box_1">
+                <%= image_tag("package (2).png", class: "icon-img") %>
+                <h3>Packing</h3>
+                <p>We will box all of your loose items.</p>
+            </div>
+            <div class="col" id="box_2">
+                <%= image_tag("loading (1).png", class: "icon-img") %>
+                <h3>Loading/Unloading</h3>
+                <p>We handle all your labor service needs.</p>
+            </div>
+            <div class="col" id="box_3">
+                <%= image_tag("trash (3).png", class: "icon-img") %>
+                <h3>Trash Removal</h3>
+                <p>Big or small, you know the Moving General has your haul!</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="button_slide slide_left"><a href="/services">View all our Services</a></div>
+    </div>
+
+    <div class="container" id="about_container">
+        <br><br><br>
+        <div class="about-grid">
+            <div class="col" id="about-left">
+                <%= image_tag("field.jpg", class: "crew") %>
+            </div>
+            <div class="col">
+                <h5>Who We Are</h5><br>
+                <h2>About Us.</h2><br>
+                <p>We are the Moving General. Our company is built of three pillars: 
+                Trust, Simplicity, and Professionalism. We look to build and exceptional 
+                relationship with you, get the job done the right way, and keep things
+                simple in whatever we do.</p><br>
+                <p>We offer Packing, Loading, Unloading, Junk Removal, and Full Service 
+                Moves. We set the standard when it comes to moving. We know you'll be in
+                good hands.</p><br><br>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="testimonial_container">
+        <div class="testimonial-grid">
+            <div class="col">
+                <h5>Client Testimonial</h5>
+                <h2>Some Positive Feedback That Encourages Us.</h2><br>
+                <p>"These two guys are seriously AMAZING. I cannot say enough kind words 
+                about them. They made my move from Pittsburgh to Cincinnati so much less stressful.
+                They took care of all of our belongings like they were their own, and I cannot 
+                appreciate that enough!!! They were also really fun to talk to and be around. 
+                I cannot recommend a better moving crew!!! Thank you so much, guys!!!!!"</p>
+                <h6>~Kandace M<h6>
+            </div>
+            <div class="col">
+                    <%= image_tag("testimonial.jpg", class: "testimonial") %>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container" id="footer_container">
+            <%= image_tag("icon.PNG", class: "icon") %>
+            <div class="flex-grid-footer">
+                <div class="col">
+                    <a href="/"><h5>HOME</h5></a>
+                </div>
+                <div class="col">
+                    <a href="/services"><h5>SERVICES</h5></a>
+                </div>
+                <div class="col">
+                    <a href="/quote"><h5>CONTACT</h5></a>
+                </div>
+            </div>
+            <p>Feel Free to Contact Us at Any Time to Ask a Question or Chat!</p>
+            <p>alex@movinggeneral.com</p>
+            <p>cole@movinggeneral.com</p>
+            <p>614-398-1565</p>
+            <div class="flex-grid-footer">
+                <div class="col">
+                    <a href="https://www.facebook.com/movinggeneral88"><%= image_tag("f_logo_RGB-White_72.png", class: "icon") %></a>
+                </div>
+                <div class="col">
+                    <a href="https://www.instagram.com/movinggeneral88"><%= image_tag("instagram-icon-white.png", class: "icon") %></a>
+                </div>
+                <div class="col">
+                    <a href="https://www.linkedin.com/company/moving-general-llc/"><%= image_tag("In-White-121px-R.png", class: "icon") %></a>
+                </div>
+            </div>
+		    <p class="site-footer__fineprint" id="fineprint">Copyright ©2021 | Moving General LLC | All Rights Reserved</p>
+        </div>
+    </footer>
+     
+</body>
+</html>

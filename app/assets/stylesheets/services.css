@@ -1,0 +1,21 @@
+.services_title{
+    align-self: center;
+    color: white;
+    font-size: 46px;
+}
+
+#title_container {
+    background-color: #171b1e;
+}
+
+  /* background styling */
+  #service_container{
+    background-image: url('family_moving.jpg');
+    background-size: 100%;
+    color: white;
+  }
+
+  .services_icon{
+    max-width: 30%;
+    height: auto;
+  }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movinggeneral</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% flash.each do |type, msg| %>
+      <div class="alert alert-info">
+        <%= msg %>
+      </div>
+    <% end %>
+    <% unless request.path == "/submitted" %>
+      <div class="nav-menu">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="navbar">
+            <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="/services"><i class="fa fa-fw fa-users"></i> Services</a>
+            <a href="/quote"><i class="fa fa-fw fa-envelope"></i> Quote</a>
+            <!--
+                <a href="/login"><i class="fa fa-fw fa-user"></i>
+                    <% if !logged_in? %> 
+                        Login
+                    <% else %>
+                        <%= current_user.username %>
+                    <% end %>
+                </a>
+            -->
+        </div>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
