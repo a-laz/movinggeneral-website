@@ -41,6 +41,11 @@
       float: none;
       display: block;
     }
+    #main_container{
+      background-image: url('./assets/images/titleimage_edited.jpeg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
   }
 
   html {
