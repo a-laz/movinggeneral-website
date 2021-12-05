@@ -259,7 +259,7 @@ body{
     color: white;
   }
 
-  .testimonial{
+  #testimonial{
     max-width: 100%;
     height: auto;
     padding-top: 33%;
@@ -284,7 +284,6 @@ body{
     align-items: flex-start;
     align-content: center;
     text-align: right;
-    
   }
 
   /* footer-container styling */
@@ -312,6 +311,16 @@ body{
     align-content: center;
     text-align: center;
   }
+  @media (min-width: 768px) {
+    #ben-allied{
+      display: none;
+    }
+    #customer{
+      display: none;
+    }  
+  }
+
+
 
   @media (max-width: 767px) {
     .title1 {
@@ -341,5 +350,52 @@ body{
       border-width: 2px;
       border-color: #363d43;
       border-radius: .2rem;
+    }
+    #about-left{
+      display: none;
+    }
+    #we_offer{
+      display:none;
+    }
+    .about-grid{
+      display: flex;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      flex-flow: column wrap;
+    }
+    .about-grid .col{
+      background-color: #171b1e;
+      max-width: 100%;
+      max-height: 100%;
+      align-items: flex-start;
+      align-content: center;
+      text-align: center; 
+    }
+    #ben-allied {
+      max-width: 75%;
+      max-height: 100%;
+    }
+    #customer {
+      max-width: 75%;
+      max-height: 100%;
+    }
+    .testimonial-grid{
+      display: flex;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      flex-flow: column wrap;
+    }
+    .testimonial-grid .col{
+      background-color: #171b1e;
+      max-width: 100%;
+      max-height: 100%;
+      align-items: flex-start;
+      align-content: center;
+      text-align: center;
+    }
+    #testimonial{
+      display: none;
     }
   }
