@@ -1,4 +1,5 @@
 class QuotesController < ApplicationController
+  before_action :authenticate_user!
   def index
   end
 
@@ -9,6 +10,7 @@ class QuotesController < ApplicationController
       @quote.address_2 = params[:address_2]
       @quote.move_date = params[:move_date]
       @quote.phone = params[:phone]
+      @quote.user_id = current_user.id
       if @quote.save
         redirect_to '/submitted', notice: "Your quote has been submitted!"
       else

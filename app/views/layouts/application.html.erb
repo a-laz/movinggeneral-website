@@ -21,11 +21,11 @@
       <div class="nav-menu">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="navbar">
-            <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
-            <a href="/services"><i class="fa fa-fw fa-users"></i> Services</a>
-            <a href="/quote"><i class="fa fa-fw fa-envelope"></i> Book Now!</a>
+            <a class="<%= active_class(root_path) %>" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a class="<%= active_class(services_path) %>" href="/services"><i class="fa fa-fw fa-users"></i> Services</a>
+            <a class="<%= active_class(quote_path) %>" href="/quote"><i class="fa fa-fw fa-envelope"></i> Book Now!</a>
             <!--
-                <a href="/login"><i class="fa fa-fw fa-user"></i>
+                <a href="/users/sign_up"><i class="fa fa-fw fa-user"></i>
                     <% if !logged_in? %> 
                         Login
                     <% else %>
